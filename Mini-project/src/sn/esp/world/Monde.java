@@ -15,4 +15,10 @@ public class Monde {
         this.nbC = 10;
     }
     
+    public String toString(){
+        if(){
+            
+        }
+    }
+    
 }
