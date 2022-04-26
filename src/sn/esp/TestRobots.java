@@ -1,7 +1,6 @@
 package sn.esp;
 
 import sn.esp.nettoyeur.RobotDistrait;
-import sn.esp.nettoyeur.RobotNettoyeur;
 import sn.esp.pollueur.PollueurSauteur;
 import sn.esp.pollueur.PollueurToutDroit;
 import sn.esp.pollueur.RobotPollueur;

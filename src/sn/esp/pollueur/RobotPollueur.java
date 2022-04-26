@@ -9,10 +9,6 @@ public class RobotPollueur extends Robot {
         super(posx, posy, m);
     }
 
-    public RobotPollueur(Monde m) {
-        super(m);
-    }
-
     public void polluer() {
         this.m.metPapierGras(this.posx, this.posy);
     }

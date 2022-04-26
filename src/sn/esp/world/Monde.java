@@ -1,9 +1,9 @@
 package sn.esp.world;
 
 public class Monde {
+    protected final boolean[][] matrice;
     protected int nbL;
     protected int nbC;
-    protected final boolean[][] matrice;
 
     public Monde() {
         this.nbC = 10;

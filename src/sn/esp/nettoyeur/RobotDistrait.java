@@ -1,6 +1,5 @@
 package sn.esp.nettoyeur;
 
-import sn.esp.robot.Robot;
 import sn.esp.world.Monde;
 
 public class RobotDistrait extends RobotNettoyeur {
