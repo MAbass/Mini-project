@@ -1,10 +1,9 @@
 package sn.esp.pollueur;
 
-import sn.esp.robot.Robot;
 import sn.esp.world.Monde;
 
-public class PollueurToutDroit extends Robot {
-    private int colDepart;
+public class PollueurToutDroit extends RobotPollueur {
+    private final int colDepart;
     private final int nbColonneDestinate;
 
     public PollueurToutDroit(int colDepart, Monde monde) {
@@ -16,7 +15,10 @@ public class PollueurToutDroit extends Robot {
     @Override
     public void parcourir() {
         for (int i = 0; i < this.nbColonneDestinate; i++) {
-            this.m.metPapierGras(i, this.colDepart);
+            vaEn(i, this.colDepart);
+            if (!this.m.estSale(i, this.colDepart)) {
+                polluer();
+            }
         }
     }
 }

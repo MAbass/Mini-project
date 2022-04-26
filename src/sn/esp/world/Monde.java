@@ -1,9 +1,9 @@
 package sn.esp.world;
 
 public class Monde {
-    private int nbL;
-    private int nbC;
-    private final boolean[][] matrice;
+    protected int nbL;
+    protected int nbC;
+    protected final boolean[][] matrice;
 
     public Monde() {
         this.nbC = 10;
@@ -12,8 +12,8 @@ public class Monde {
     }
 
     public Monde(int nbL, int nbC) {
-        this.nbL = nbL;
-        this.nbC = nbC;
+        this.nbL = Math.abs(nbL);
+        this.nbC = Math.abs(nbC);
         this.matrice = new boolean[this.nbL][this.nbC];
     }
 
@@ -65,23 +65,19 @@ public class Monde {
 
     @Override
     public String toString() {
-        print2D(this.matrice);
-        return "Le monde a " + this.nbL + " de lignes et " + this.nbC + " de colonnes.\n On a " + this.nbPapierGras() +
-                " de papier gras dans ce monde.\n";
-    }
-
-    public static void print2D(boolean[][] matrice) {
-        for (boolean[] row : matrice) {
-            for (boolean elem : row) {
-                if (elem) {
-                    System.out.print("o\t");
+        StringBuilder monde = new StringBuilder();
+        for (int i = 0; i < nbL; i++) {
+            for (int j = 0; j < nbC; j++) {
+                if (this.matrice[i][j]) {
+                    monde.append("o\t");
                 } else {
-                    System.out.print("x\t");
+                    monde.append(".\t");
                 }
             }
-            System.out.println();
+            monde.append("\n");
         }
-        System.out.println();
+        return "Le monde a " + this.nbL + " de lignes et " + this.nbC + " de colonnes.\n On a " + this.nbPapierGras() +
+                " de papier gras dans ce monde.\n" + monde;
     }
 
     public int getNbL() {

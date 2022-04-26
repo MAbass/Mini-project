@@ -17,12 +17,21 @@ public class RobotNettoyeur extends Robot {
         for (int i = 0; i < this.m.getNbL(); i++) {
             for (int j = 0; j < this.m.getNbC(); j++) {
                 if (i % 2 == 0) {
-                    this.m.prendPapierGras(i, j);
+                    vaEn(i, j);
+                    if (this.m.estSale(i, j)) {
+                        nettoyer();
+                    }
                 } else {
-                    this.m.prendPapierGras(i, this.m.getNbC() - j - 1);
+                    vaEn(i, this.m.getNbC() - j - 1);
+                    if (this.m.estSale(i, this.m.getNbC() - j - 1)) {
+                        nettoyer();
+                    }
+                    nettoyer();
+
                 }
 
             }
         }
+
     }
 }

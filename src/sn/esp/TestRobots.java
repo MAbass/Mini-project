@@ -9,7 +9,7 @@ import sn.esp.world.Monde;
 
 public class TestRobots {
     public static void main(String[] args) {
-        Monde monde = new Monde(10, 7);
+        Monde monde = new Monde(-10, 7);
         System.out.println("--------Placez des papiers gras--------");
         monde.metPapierGras(1, 1);
         monde.metPapierGras(3, 7);
