@@ -9,7 +9,7 @@ public class RobotDistrait extends RobotNettoyeur {
 
     @Override
     public void parcourir() {
-        for (int i = 0; i < this.m.getNbL(); i++) {
+        /*for (int i = 0; i < this.m.getNbL(); i++) {
             for (int j = 0; j < this.m.getNbC(); j++) {
                 int colVariable = this.m.getNbC() - j - 1;
                 if (i % 2 == 0) {
@@ -29,8 +29,8 @@ public class RobotDistrait extends RobotNettoyeur {
                 }
 
             }
-        }
-        /*int cmpt = 0;
+        }*/
+        int cmpt = 0;
         for (int i = 0; i < this.m.getNbL(); i++) {
             for (int j = 0; j < this.m.getNbC(); j++) {
                 if (i % 2 == 0) {
@@ -51,7 +51,6 @@ public class RobotDistrait extends RobotNettoyeur {
                     }
                 }
             }
-
-        }*/
+        }
     }
 }

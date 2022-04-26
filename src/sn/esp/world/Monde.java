@@ -24,7 +24,7 @@ public class Monde {
         if (j >= this.nbC) {
             j = this.nbC - 1;
         }
-        System.out.println("Papier gras au:(" + i + "," + j + ")");
+//        System.out.println("Papier gras au:(" + i + "," + j + ")");
         matrice[i][j] = true;
     }
 
@@ -35,7 +35,7 @@ public class Monde {
         if (j >= this.nbC) {
             j = this.nbC - 1;
         }
-        System.out.println("Enlevez du papier gras au:(" + i + "," + j + ")");
+//        System.out.println("Enlevez du papier gras au:(" + i + "," + j + ")");
 
         matrice[i][j] = false;
     }

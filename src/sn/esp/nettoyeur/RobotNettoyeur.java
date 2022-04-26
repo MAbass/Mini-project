@@ -32,6 +32,5 @@ public class RobotNettoyeur extends Robot {
 
             }
         }
-
     }
 }
